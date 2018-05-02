@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.simple_template.spring"></context:component-scan>
+ 
+<!-- 	Example using bean configuration -->
+<!-- >	<bean id="vehicle" class = "com.simple_template.spring.Car"></bean> -->
+ 
+ <!-- Example where using add a property tag inside a bean tip: using setter injection -->
+<!--   <bean id = "tyre" class = "com.simple_template.spring.Tyre">
+	<property name="brand" value="Ceva"></property>
+</bean>
+-->
+
+<!--  Example using constructor injection -->
+<bean id = "tyre" class = "com.simple_template.spring.Tyre">
+	<constructor-arg value="ZARA"></constructor-arg>
+</bean>
+
+
+</beans>	
